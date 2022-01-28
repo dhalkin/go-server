@@ -1,0 +1,25 @@
+
+
+#run:
+#  skip-files:
+#    - pkg/appkit/start_app.go
+#  skip-dirs:
+#    - internal/generated
+#    - internal/pkg/barracuda
+
+
+linters:
+  enable:
+    - deadcode
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - structcheck
+    - typecheck
+    - unused
+    - varcheck
+    - revive
+    - gofmt
+    - stylecheck

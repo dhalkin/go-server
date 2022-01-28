@@ -1,0 +1,7 @@
+Server:
+  Addr: ":8080"
+  ReadTimeout: 10
+  WriteTimeout: 20
+
+Sandbox:
+  LocalFolder: "tmp"
