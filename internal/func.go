@@ -18,8 +18,16 @@ func getE() *echo.Echo {
 	e.Use(middleware.BodyLimit("1M"))
 	e.Use(middleware.BodyDump(func(c echo.Context, reqBody, resBody []byte) {
 
-		_, err := c.FormFile("file")
-		if err != nil {
+		// ??
+		//_, err := c.FormFile("file")
+		//if err != nil {
+		//	str := string(reqBody)
+		//	fmt.Println(str)
+		//}
+
+		req := c.Request()
+		mpfd := req.MultipartForm.File
+		if len(mpfd) == 0 {
 			str := string(reqBody)
 			fmt.Println(str)
 		}
