@@ -5,3 +5,6 @@ Server:
 
 Sandbox:
   LocalFolder: "tmp"
+
+Database:
+  MySql: signnow:ba99wu8ck2@/signnow

@@ -1,4 +1,4 @@
-package handlers
+package controllers
 
 import (
 	"fmt"
@@ -10,11 +10,13 @@ import (
 	"os"
 )
 
+// GetHola download
 func GetHola(c echo.Context) error {
 
 	return c.String(http.StatusOK, "OK - hola")
 }
 
+// PutHola upload
 func PutHola(c echo.Context) error {
 
 	path := fmt.Sprintf("%v", viper.Get("Sandbox.LocalFolder"))
@@ -47,5 +49,5 @@ func PutHola(c echo.Context) error {
 		return err
 	}
 
-	return c.String(http.StatusOK, "OK - Put")
+	return c.String(http.StatusOK, "OK - POSTED")
 }
